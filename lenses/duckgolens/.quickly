@@ -1,0 +1,3 @@
+project = duckgolens
+version = 12.04
+template = unity-lens

@@ -1,0 +1,11 @@
+[Lens]
+DBusName=unity.singlet.lens.subtitles
+DBusPath=/unity/singlet/lens/subtitles
+Name=Subtitles
+Icon=/usr/share/unity/lenses/subtitles/unity-lens-subtitles.svg
+Description=Subtitles Lens
+SearchHint=Search Subtitles
+#Shortcut=c
+
+[Desktop Entry]
+X-Ubuntu-Gettext-Domain=subtitles
