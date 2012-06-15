@@ -1,0 +1,11 @@
+[Lens]
+DBusName=unity.singlet.lens.ninjaplugins
+DBusPath=/unity/singlet/lens/ninjaplugins
+Name=Ninjaplugins
+Icon=/usr/share/unity/lenses/ninjaplugins/unity-lens-ninjaplugins.svg
+Description=Ninjaplugins Lens
+SearchHint=Search for NINJA-IDE Plugins to install
+#Shortcut=c
+
+[Desktop Entry]
+X-Ubuntu-Gettext-Domain=ninjaplugins

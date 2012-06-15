@@ -1,0 +1,11 @@
+[Lens]
+DBusName=unity.singlet.lens.u1publish
+DBusPath=/unity/singlet/lens/u1publish
+Name=U1publish
+Icon=/usr/share/unity/lenses/u1publish/unity-lens-u1publish.svg
+Description=U1publish Lens
+SearchHint=Search for U1 files to publish
+#Shortcut=c
+
+[Desktop Entry]
+X-Ubuntu-Gettext-Domain=u1publish
