@@ -63,8 +63,9 @@ class NinjapluginsLens(SingleScopeLens):
     def handle_uri(self, scope, uri):
         url = uri[1:]
         try:
-            plugin = self.download_plugin(url)
-            self.update_local_plugin_descriptor(plugin, url)
+            if os.path.isdir(self.plugins_folder):
+                plugin = self.download_plugin(url)
+                self.update_local_plugin_descriptor(plugin, url)
         except Exception, reason:
             print 'plugin could not be installed'
             print reason
