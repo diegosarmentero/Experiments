@@ -43,6 +43,8 @@ class NinjapluginsLens(SingleScopeLens):
             ninja_query = '%s/%s' % (self.url, search)
             query = json.load(urllib2.urlopen(ninja_query))
         elif len(words) > 1:
+            # This part of the algorithm is for a limitation that we didn't
+            # fix yet in the web api to search for plugins
             query = json.load(urllib2.urlopen(self.url))
             temp_results = []
             for d in query:
