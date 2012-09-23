@@ -2,7 +2,7 @@
   "mainFile": "", 
   "venv": "", 
   "relatedProjects": [], 
-  "name": "subtitles", 
+  "name": "duckgolens", 
   "license": "", 
   "url": "", 
   "pythonPath": "python", 
@@ -17,6 +17,7 @@
     ".ui", 
     ".css", 
     ".json", 
+    ".js", 
     ".ini", 
     ".qss", 
     ".*"

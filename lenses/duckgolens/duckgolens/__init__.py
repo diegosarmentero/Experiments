@@ -1,11 +1,4 @@
-import logging
-import optparse
-
 import duckduckgo
-
-import gettext
-from gettext import gettext as _
-gettext.textdomain('duckgolens')
 
 from singlet.lens import SingleScopeLens, IconViewCategory, ListViewCategory
 
@@ -28,7 +21,8 @@ class DuckgolensLens(SingleScopeLens):
         # TODO: Add your search results
         for text, url in self.duckduckgo_query(search):
             results.append(url,
-             'http://upload.wikimedia.org/wikipedia/en/thumb/2/24/Duck_Duck_Go.svg/200px-Duck_Duck_Go.svg.png',
+             ('file:///usr/share/unity/lenses/'
+              'duckgolens/unity-lens-duckgolens.svg'),
              self.search_category,
              "text/html",
              text,

@@ -1,16 +1,10 @@
-import logging
-import optparse
-
-import gettext
-from gettext import gettext as _
-gettext.textdomain('subtitles')
-
 from singlet.lens import SingleScopeLens, IconViewCategory, ListViewCategory
 
 from subtitles import subtitlesconfig
 
 import urllib2
 from BeautifulSoup import BeautifulSoup
+
 
 class SubtitlesLens(SingleScopeLens):
 
@@ -19,7 +13,7 @@ class SubtitlesLens(SingleScopeLens):
         description = 'Subtitles Lens'
         search_hint = 'Search Subtitles'
         icon = 'subtitles.svg'
-        search_on_blank=True
+        search_on_blank = True
 
     # TODO: Add your categories
     subtitles_category = IconViewCategory("Subtitles", 'help')
@@ -30,7 +24,8 @@ class SubtitlesLens(SingleScopeLens):
     def search(self, search, results):
         for text, url in self.subtitles_query(search):
             results.append(url,
-             'http://a.fsdn.com/con/icons/gn/gnome-subtitles@sf.net/gnome-subtitles.png',
+             ('file:///usr/share/unity/lenses/'
+              'subtitles/unity-lens-subtitles.svg'),
              self.subtitles_category,
              "text/html",
              text,

@@ -1,0 +1,5 @@
+duckduckgo.py
+pip-egg-info/duckduckgo.egg-info/PKG-INFO
+pip-egg-info/duckduckgo.egg-info/SOURCES.txt
+pip-egg-info/duckduckgo.egg-info/dependency_links.txt
+pip-egg-info/duckduckgo.egg-info/top_level.txt
