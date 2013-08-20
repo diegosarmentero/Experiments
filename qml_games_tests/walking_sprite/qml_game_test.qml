@@ -5,6 +5,7 @@ Rectangle {
     id: game
     width: 800
     height: 600
+    color: "light blue"
 
     Rectangle {
         id: floor
@@ -28,13 +29,21 @@ Rectangle {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            var pos = mouseX - (guybrush.width / 2)
+            var pos = mouseX - (guybrush.width / 2);
+            var posY = mouseY - guybrush.height;
+            var difference = Math.abs(guybrush.x - pos);
+            var duration = difference * 1000 / 100;
+            guybrush.duration = duration;
             if(mouseX < guybrush.x){
-                guybrush.state = "left"
+                guybrush.state = "left";
                 guybrush.x = pos;
             }else{
-                guybrush.state = "right"
+                guybrush.state = "right";
                 guybrush.x = pos;
+            }
+            if(posY > 0){
+                guybrush.y = posY;
+                guybrush.scale = 0.5;
             }
         }
     }

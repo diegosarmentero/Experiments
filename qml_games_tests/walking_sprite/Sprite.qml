@@ -8,7 +8,8 @@ Item{
     property alias running: timer.running;
     property int frame:0
     property int frameCount: 0;
-    property alias source:image.source
+    property alias source: image.source
+    property int duration: 2000;
 
     Image{
          id:image
@@ -26,7 +27,9 @@ Item{
     }
 
     // Animations
-    Behavior on x { PropertyAnimation { duration: 2000 } }
+    Behavior on x { PropertyAnimation { duration: sprite.duration } }
+    Behavior on y { PropertyAnimation { duration: sprite.duration } }
+    Behavior on scale { PropertyAnimation { duration: sprite.duration } }
 
     states: [
         State {
